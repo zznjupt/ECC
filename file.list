@@ -1,0 +1,9 @@
+./modular/addMod.v
+./modular/productMod.v
+./modular/invMod.v
+./modular/subMod.v
+./modular/monProduct.v
+./add.v
+./dotProduct.v
+./tb/dP_dut.v
+./tb/dP_tb.v

@@ -45,7 +45,7 @@ reg  [3:0]              state_cs, state_ns;
 reg  [DATA_WIDTH-1:0]   u;
 reg  [DATA_WIDTH-1:0]   v;
 reg  [DATA_WIDTH-1:0]   s;
-reg  [DATA_WIDTH-1:0]   r;
+reg  [DATA_WIDTH-1+1:0] r;
 reg  [31:0]             k;
 reg  [9:0]              cnt;
 reg  [DATA_WIDTH-1:0]   opM_reg;

@@ -39,9 +39,9 @@ U_dut (
 
 
  initial begin
- 	//$fsdbDumpfile("dotProduct.fsdb");
- 	//$fsdbDumpvars(0,"+mda");
- 	//$fsdbDumpvars();
+ 	$fsdbDumpfile("dotProduct.fsdb");
+ 	// $fsdbDumpvars(0,"+mda");
+ 	$fsdbDumpvars();
  end
 
 endmodule

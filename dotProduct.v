@@ -13,7 +13,7 @@ module dotProduct # (
 );
 
 
-parameter IDLE = 4'd0;
+parameter IDLE  = 4'd0;
 parameter RD	= 4'd1;
 parameter IDLE2	= 4'd2;
 parameter ADD1	= 4'd3;

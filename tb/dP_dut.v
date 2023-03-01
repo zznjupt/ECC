@@ -17,7 +17,7 @@ module dP_dut # (
 );
 
 integer     patcount;
-parameter   PATNUM = 1;
+parameter   PATNUM = 5;
 
 integer     golden_read;
 integer     i, j, a, gap;
@@ -55,7 +55,7 @@ end
 
 initial begin
 	// read file
-	golden_read = $fopen("C:\\Users\\ZZ\\Desktop\\project_2\\dP.txt", "r");
+	golden_read = $fopen("./golden/dP.txt", "r");
 	
 	// initial signal
 	in_valid = 0;
