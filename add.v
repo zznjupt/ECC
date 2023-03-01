@@ -100,7 +100,8 @@ wire                    mi_in_valid;
 wire                    mi_out_valid;
 
 // soft module
-productMod pm (
+productMod # (.DATA_WIDTH(DATA_WIDTH)) 
+pm (
 	.clk        (clk),
 	.rst_n      (rst_n),
 	.opA        (pm_opA),
@@ -111,7 +112,8 @@ productMod pm (
 	.out_valid  (pm_out_valid)
 );
 
-addMod am (
+addMod # (.DATA_WIDTH(DATA_WIDTH)) 
+am (
 	.clk        (clk),
 	.opA        (am_opA),
 	.opB        (am_opB),
@@ -119,7 +121,8 @@ addMod am (
 	.out_data   (am_out_data)
 );
 
-subMod sm (
+subMod # (.DATA_WIDTH(DATA_WIDTH))
+sm (
 	.clk        (clk),
 	.opA        (sm_opA),
 	.opB        (sm_opB),
@@ -128,7 +131,8 @@ subMod sm (
 
 );
 
-invMod mi (
+invMod # (.DATA_WIDTH(DATA_WIDTH)) 
+mi (
 	.clk        (clk),
 	.rst_n      (rst_n),
 	.opA        (mi_opA),

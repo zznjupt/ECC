@@ -43,7 +43,8 @@ wire [DATA_WIDTH-1:0]   add_Ry;
 reg 		            add_in_valid;
 wire 		            add_out_valid;
 
-add a1 (
+add # (.DATA_WIDTH(DATA_WIDTH)) 
+a1 (
 	.clk        (clk),
 	.rst_n      (rst_n),
 	.Px         (add_Px),
