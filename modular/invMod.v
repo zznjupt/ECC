@@ -173,7 +173,7 @@ always @(posedge clk or negedge rst_n) begin
 			r <= r - opM_reg;
 	end else if(state_ns == STAGE_2) begin
 		r <= opM_reg - r;
-		k <= k - 256;
+		k <= k - DATA_WIDTH;
 	end else if(state_ns == STAGE_3) begin
 		if(r[0] == 1)
 			r <= tmp_r >> 1;

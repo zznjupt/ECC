@@ -26,7 +26,7 @@ module monProduct # (
 	output reg                      out_valid
 );
 
-
+// STATE
 parameter IDLE  = 3'd0;
 parameter INPUT = 3'd1;
 parameter OP1   = 3'd2;

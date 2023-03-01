@@ -1,5 +1,5 @@
 module dotProduct # (
-    parameter DATA_WIDTH = 256
+    parameter DATA_WIDTH = 128
 ) (
     input  wire                     clk,
     input  wire                     rst_n,
@@ -32,7 +32,7 @@ reg [DATA_WIDTH-1:0] k_reg;
 wire done_add;
 wire add_Mult;
 assign add_Mult = (k_reg[cnt]) ? 1 : 0;
-assign done_add = (cnt == 256) ? 1 : 0;
+assign done_add = (cnt == DATA_WIDTH) ? 1 : 0;
 
 reg  [DATA_WIDTH-1:0]   add_Px;
 reg  [DATA_WIDTH-1:0]   add_Py;

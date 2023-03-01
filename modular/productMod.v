@@ -26,6 +26,7 @@ module productMod # (
 	input  wire                     in_valid,
 	output reg                      out_valid
 );
+
 // STATE
 parameter IDLE 		= 3'd0;
 parameter STAGE_1 	= 3'd1;
