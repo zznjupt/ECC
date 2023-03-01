@@ -5,5 +5,5 @@
 ./modular/monProduct.v
 ./add.v
 ./dotProduct.v
-./tb/dP_dut.v
-./tb/dP_tb.v
+./tb/dP_dut.sv
+./tb/dP_tb.sv
