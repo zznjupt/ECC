@@ -55,7 +55,7 @@ end
 
 initial begin
 	// read file
-	golden_read = $fopen("./golden/dP.txt", "r");
+	golden_read = $fopen("./golden/dotProduct.txt", "r");
 	
 	// initial signal
 	in_valid = 0;
