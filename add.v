@@ -14,7 +14,7 @@
 */ 
 
 module add # (
-    parameter DATA_WIDTH = 256
+    parameter DATA_WIDTH = 192
 ) (
     input  wire                     clk,
     input  wire                     rst_n,
