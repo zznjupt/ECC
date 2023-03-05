@@ -63,6 +63,7 @@ parameter DONE 	            = 5'd17;
 // GF(p)
 // SECP_256_K1
 // parameter p = 'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F;
+// SECP_192_K1
 parameter p = 192'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFEE37;
 
 reg  [4:0]              state_cs, state_ns;
