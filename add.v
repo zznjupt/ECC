@@ -60,8 +60,10 @@ parameter PM3_DONE          = 5'd27;
 parameter SM4	            = 5'd15;
 parameter SM4_DONE          = 5'd28;
 parameter DONE 	            = 5'd17;
-//GF(p)
-parameter p = 'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F;
+// GF(p)
+// SECP_256_K1
+// parameter p = 'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F;
+parameter p = 192'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFEE37;
 
 reg  [4:0]              state_cs, state_ns;
 

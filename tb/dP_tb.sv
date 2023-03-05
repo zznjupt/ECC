@@ -2,15 +2,15 @@ module dP_tb();
 
 wire clk;
 wire rst_n;
-wire [255:0]Px;
-wire [255:0]Py;
-wire [255:0]k;
-wire [255:0]Rx;
-wire [255:0]Ry;
+wire [191:0]Px;
+wire [191:0]Py;
+wire [191:0]k;
+wire [191:0]Rx;
+wire [191:0]Ry;
 wire in_valid;
 wire out_valid;
 
-dotProduct #(256)
+dotProduct #(192)
 U_dotProduct (
 	.clk        (clk),
 	.rst_n      (rst_n),
@@ -24,7 +24,7 @@ U_dotProduct (
 );
 
 
-dP_dut #(256) 
+dP_dut #(192) 
 U_dut (
 	.clk        (clk),
 	.rst_n      (rst_n),

@@ -1,5 +1,5 @@
 module dotProduct # (
-    parameter DATA_WIDTH = 128
+    parameter DATA_WIDTH = 256
 ) (
     input  wire                     clk,
     input  wire                     rst_n,

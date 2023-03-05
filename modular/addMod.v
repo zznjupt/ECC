@@ -12,7 +12,7 @@
     GP(opM) => opA < opM && opB < opM
 */
 module addMod # (
-    parameter DATA_WIDTH = 256
+    parameter DATA_WIDTH = 192
 ) (
     input  wire                     clk,
 
