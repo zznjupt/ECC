@@ -1,4 +1,4 @@
-/**
+/*
  * @brief return (opA + opB) mod opM
  *
  * @tparam N bit width of opA, opB and opM
@@ -14,7 +14,7 @@
 module addMod # (
     parameter DATA_WIDTH = 256
 ) (
-    input  wire                     clk,
+    // input  wire                     clk,
 
     input  wire [DATA_WIDTH-1:0]    opA,
     input  wire [DATA_WIDTH-1:0]    opB,

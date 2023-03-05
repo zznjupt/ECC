@@ -1,4 +1,4 @@
-/**
+/*
 * @brief perform point addition in Elliptic-curve ( R = P + Q)
 *
 * @param Px X coordinate of point P. Should be smaller than p.
@@ -18,12 +18,14 @@ module add # (
 ) (
     input  wire                     clk,
     input  wire                     rst_n,
+
     input  wire [DATA_WIDTH-1:0]    Px,
     input  wire [DATA_WIDTH-1:0]    Py,
     input  wire [DATA_WIDTH-1:0]    Qx,
     input  wire [DATA_WIDTH-1:0]    Qy,
     output reg  [DATA_WIDTH-1:0]    Rx,
     output reg  [DATA_WIDTH-1:0]    Ry,
+
     input  wire                     in_valid,
     output reg                      out_valid
 );
@@ -292,10 +294,9 @@ always @(*) begin
 		SM4:			    state_ns = SM4_DONE;
 		SM4_DONE:		    state_ns = DONE;
 		DONE:			    state_ns = IDLE;
+		// default:			state_ns = IDLE;
 	endcase
 end
-
-
 
 always @(posedge clk or negedge rst_n) begin
 	if(!rst_n)

@@ -107,6 +107,7 @@ always @(*) begin
 		ADD2:	state_ns = (add_out_valid) ? IDLE2 : ADD2;
 		IDLE4:	state_ns = DONE;
 		DONE:	state_ns = IDLE;
+		// default:state_ns = IDLE;
 	endcase
 end
 

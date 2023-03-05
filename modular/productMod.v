@@ -1,4 +1,4 @@
-/**
+/*
  * @brief return (opA * opB) mod opM
  *
  * @tparam N bit width of opA, opB and opM
@@ -59,6 +59,7 @@ always @(*) begin
 		COMPARE: state_ns = STAGE_2;
 		STAGE_2: state_ns = (all_done) ? DONE : STAGE_1;
 		DONE: 	 state_ns = IDLE;
+		// default: state_ns = IDLE;
 	endcase
 end
 
@@ -76,7 +77,7 @@ always @(posedge clk or negedge rst_n) begin
 		opA_reg <= 0;
 		opB_reg <= 0;
 		opM_reg <= 0;
-	end else if(state_ns==IDLE) begin
+	end else if(state_ns == IDLE) begin
 		opA_reg <= 0;
 		opB_reg <= 0;
 		opM_reg <= 0;
@@ -99,7 +100,7 @@ always @(posedge clk or negedge rst_n) begin
             compare_reg <= compare_shift - opM_reg;
 		else 
 			compare_reg <= compare_shift;
-	end else if(state_ns==COMPARE) begin
+	end else if(state_ns == COMPARE) begin
 		if(opB_reg[DATA_WIDTH-1 - cnt])
 			compare_reg <= compare_reg + opA_reg;
 	end else if(state_ns == STAGE_2)begin

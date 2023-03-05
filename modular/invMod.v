@@ -1,4 +1,4 @@
-/**
+/*
  * @brief return modular inverse of opA
  * Reference: "The Montgomery Modular Inverse - Revisited" by E Savas, CK Koç
  *
@@ -96,6 +96,7 @@ always @(*) begin
 		IDLE5:		state_ns = STAGE_4;
 		STAGE_4: 	state_ns = (mp_out_valid) ? DONE : STAGE_4;
 		DONE:		state_ns = IDLE;
+		// default:	state_ns = IDLE;
 	endcase
 end
 

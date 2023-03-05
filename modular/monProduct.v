@@ -68,11 +68,12 @@ end
 
 always @(*) begin
 	case(state_cs)
-		IDLE:	state_ns = (in_valid) ? INPUT : IDLE;
-		INPUT:	state_ns = OP1;
-		OP1:	state_ns = (done_op) ? OP2 : OP1;
-		OP2:	state_ns = DONE;
-		DONE:	state_ns = IDLE;
+		IDLE:	 state_ns = (in_valid) ? INPUT : IDLE;
+		INPUT:	 state_ns = OP1;
+		OP1:	 state_ns = (done_op) ? OP2 : OP1;
+		OP2:	 state_ns = DONE;
+		DONE:	 state_ns = IDLE;
+		// default: state_ns = IDLE;
 	endcase
 end
 
