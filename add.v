@@ -261,7 +261,7 @@ wire case2 = (Px_reg == Qx_reg && (Py_reg + Qy_reg) == p);
 
 always @(*) begin
 	case(state_cs)
-		IDLE:			    state_ns = (in_valid)?RD:IDLE;
+		IDLE:			    state_ns = (in_valid) ? RD : IDLE;
 		RD:				    state_ns = SET;
 		SET: begin
 			if(case1)
