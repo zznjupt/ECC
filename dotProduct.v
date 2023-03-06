@@ -65,7 +65,7 @@ always @(*) begin
 end
 
 always @(*) begin
-	if(state_ns == ADD1)begin
+	if(state_ns == ADD1) begin
 		add_Px = Px_reg;
 		add_Py = Py_reg;
 		add_Qx = Rx;
